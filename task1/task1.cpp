@@ -3,9 +3,11 @@ using namespace std;
 #include <string>
 #include <task1.h>
 
-void Motorvehicle::print() {
-    cout << "Diameters of tire: " << *tireDiameters << endl;
+void Motorvehicle::print() {   
     cout << "Number of tires: " << numberOfTires << endl;
+    for (int i = 0; i < numberOfTires; i++) {
+        cout << "Diameter of tire: " << tireDiameters[i] << endl;
+    }   
     engine.print();
     body.print();
     owner.print();
@@ -33,7 +35,7 @@ int main()
     cin >> amount;
     //cin.ignore(1, '\n');
     
-    Motorvehicle arrayCars[20];
+    Motorvehicle arrayCars[20];    
 
     for (int k = 0; k < amount; k++) {
         string name, address;
@@ -50,13 +52,15 @@ int main()
         getline(cin, arrayCars[k].owner.name);
 
         cout << "Enter address of car (string): ";
-        getline(cin, arrayCars[k].owner.address);
+        getline(cin, arrayCars[k].owner.address);       
 
-        cout << "Enter diameters (float): ";
-        cin >> *arrayCars[k].tireDiameters;
-
-        cout << "Enter amount of tires (int): ";
-        cin >> arrayCars[k].numberOfTires;
+        cout << "Enter amount of tires (int): ";       
+        cin >> arrayCars[k].numberOfTires;      
+        
+        for (int i = 0; i < arrayCars[k].numberOfTires; i++) {
+            cout << "Enter tire diameter (float): ";
+            cin >> arrayCars[k].tireDiameters[i];
+        }
 
         cout << "Enter size of engine of litres (float): ";
         cin >> arrayCars[k].engine.sizeInLitres;
@@ -78,9 +82,9 @@ int main()
 
         //Motorvehicle car(tireDiameters, numberOfCylinders, sizeInLitres, numberOfCylinders, color, width, height, name, address, allowedToDrive);
     }
-    for (int i = 0; i < amount; i++) {
-        cout << "Car: " << i << " has this stuff:\n ";
+    for (int i = 0; i < amount; i++) {       
         cout << "----------------------------------------------------\n";
+        cout << "Car: " << i+1 << " has these values:\n";
         arrayCars[i].print();
         cout << endl;
     }

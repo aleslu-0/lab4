@@ -45,7 +45,7 @@ public:
     string name, address;
     bool allowedToDrive;
     Owner() {
-        name = "balex";
+        name = "alex";
         address = "nowhere";
         allowedToDrive = true;
     }
@@ -63,15 +63,14 @@ public:
     //fields
     Engine engine;
     Body body;
-    Owner owner;
-    float* tireDiameters;
+    Owner owner;    
     int numberOfTires;
-    float *b = new float;
+    float* tireDiameters;
 
     Motorvehicle() {
-        //tires
-        tireDiameters = b;
+        //tires        
         numberOfTires = 1;
+        tireDiameters = new float[20];
 
         //engine
         engine.sizeInLitres = 0.0;
@@ -87,8 +86,14 @@ public:
         owner.address = "";
         owner.allowedToDrive = true;
     }
+    /*Motorvehicle(Motorvehicle &o) {
+        tireDiameters = new float[o.numberOfTires];
+        for (int k = 0; k < o.numberOfTires; k++) {
+            tireDiameters[k] = o.tireDiameters[k];
+        }
+    }*/
     ~Motorvehicle() {
-        delete tireDiameters;
+        delete[] tireDiameters;
     }
 
     void print();

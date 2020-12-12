@@ -2,14 +2,9 @@
 #include <string>
 using namespace std;
 
-class Polyline {
-public:
-
-};
-
 class Point2D {
 public:
-	float x, y;
+	float x, y;	
 
 	Point2D operator+(const Point2D& p);
 	Point2D& operator=(const Point2D& p);
@@ -26,4 +21,26 @@ public:
 	float Distance(float p1, float p2);
 
 	string Location();
+};
+
+class Polyline {
+public:
+	Point2D* arr;
+	int size;
+	int ind;
+	bool full;
+
+	Polyline(int size) {
+		arr = new Point2D[size];
+		this->size = size;
+		ind = 0;
+		full = false;
+	}
+	~Polyline() {
+		delete[] arr;
+	}
+	void add_P(Point2D P);
+
+	void rem_P(Point2D P);
+
 };
