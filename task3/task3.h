@@ -39,8 +39,18 @@ public:
 	~Polyline() {
 		delete[] arr;
 	}
+	void operator delete(void* p);
+
 	void add_P(Point2D P);
 
-	void rem_P(Point2D P);
+	void rem_P();
+
+	bool check_P(float x, float y);
+
+	int total_P();
+
+	float length_P();
+
+	void print_P();
 
 };
