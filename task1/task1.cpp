@@ -33,13 +33,11 @@ int main()
     int amount;
     cout << "How many cars do you wish to make?: ";
     cin >> amount;
-    //cin.ignore(1, '\n');
     
     Motorvehicle arrayCars[20];    
 
     for (int k = 0; k < amount; k++) {
         string name, address;
-        //float* dia = new float;
         int numberOfTires;
         float sizeInLitres;
         int numberOfCylinders;
@@ -80,7 +78,6 @@ int main()
         cout << "Enter if you're allowed to drive (1/0): ";
         cin >> arrayCars[k].owner.allowedToDrive;
 
-        //Motorvehicle car(tireDiameters, numberOfCylinders, sizeInLitres, numberOfCylinders, color, width, height, name, address, allowedToDrive);
     }
     for (int i = 0; i < amount; i++) {       
         cout << "----------------------------------------------------\n";

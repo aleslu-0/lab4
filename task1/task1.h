@@ -86,12 +86,7 @@ public:
         owner.address = "";
         owner.allowedToDrive = true;
     }
-    /*Motorvehicle(Motorvehicle &o) {
-        tireDiameters = new float[o.numberOfTires];
-        for (int k = 0; k < o.numberOfTires; k++) {
-            tireDiameters[k] = o.tireDiameters[k];
-        }
-    }*/
+
     ~Motorvehicle() {
         delete[] tireDiameters;
     }

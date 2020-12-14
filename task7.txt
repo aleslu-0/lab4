@@ -1,0 +1,18 @@
+	Reflection:
+-------------------------------------------------------
+"What did you learn? What did you know already?"
+-Classes.
+-All the things from previous assignements.  
+
+-------------------------------------------------------
+ "What was difficult in the lab? How did you overcome it?"
+-Understanding classes.  
+-Google and help from classmate.
+
+-------------------------------------------------------
+"How can the lab be improved?"
+-More sources for where to learn the class components. Things such as nullptr was not covered in lectures.
+
+-------------------------------------------------------
+"Additionally, write an estimate how many hours you spent on this lab."
+-17 hours. 
