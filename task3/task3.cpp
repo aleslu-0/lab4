@@ -77,9 +77,7 @@ void Polyline::print_P() {
         cout << arr[k].Location() << endl;
     }
 }
-void Polyline::operator delete(void *p)noexcept {
-    free(p);
-}
+
 int add(Polyline &a) {
     int amount;
     cout << "How many points do you want to add?" << endl;
@@ -190,10 +188,10 @@ int main()
             cout << boolalpha << check(a) << endl;
         }
         else if (inp == 4) {
-            cout << total(a) << endl;
+            cout << "Total is: " << total(a) << endl;
         }
         else if (inp == 5) {
-            cout << length(a) << endl;
+            cout << "Length is: " << length(a) << endl;
         }
         else if (inp == 6) {
             print(a);
@@ -204,6 +202,5 @@ int main()
         
     }
     return 0;
-    //add(a);
    
 }

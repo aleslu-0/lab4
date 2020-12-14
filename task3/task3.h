@@ -39,7 +39,6 @@ public:
 	~Polyline() {
 		delete[] arr;
 	}
-	void operator delete(void* p);
 
 	void add_P(Point2D P);
 
